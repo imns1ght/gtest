@@ -99,6 +99,8 @@ two `string` objects, use `EXPECT_EQ`, `EXPECT_NE`, and etc instead.
 | `ASSERT_STRCASEEQ(str1, str2);` | `EXPECT_STRCASEEQ(str1, str2);` | the two C strings have the same content, ignoring case   |
 | `ASSERT_STRCASENE(str1, str2);` | `EXPECT_STRCASENE(str1, str2);` | the two C strings have different contents, ignoring case |
 
+### Basic structure of TEST()
+
 1.  Use the `TEST()` macro to define and name a test function, These are
     ordinary C++ functions that don't return a value.
 1.  In this function, along with any valid C++ statements you want to include,
@@ -106,8 +108,6 @@ two `string` objects, use `EXPECT_EQ`, `EXPECT_NE`, and etc instead.
 1.  The test's result is determined by the assertions; if any assertion in the
     test fails (either fatally or non-fatally), or if the test crashes, the
     entire test fails. Otherwise, it succeeds.
-
-### Basic structure of TEST()
 
 ```c++
 TEST(TestSuiteName, TestName) {
