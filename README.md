@@ -8,34 +8,39 @@ Initially, it was just my notes.
 
 ## Compiling
 
-Assuming you have installed [CMake](https://cmake.org) and [GTest](https://github.com/google/googletest), we can follow these steps:
+Assuming you have installed [CMake](https://cmake.org), [GTest](https://github.com/google/googletest) and Git, we can follow these steps:
 
-1. Create a new directory in which the compilation output will be stored (including the executable).
+1. Download the project and moves into the root directory
+    ```
+    git clone https://github.com/imns1ght/gtest && cd gtest/
+    ``` 
+
+2. Create a new directory in which the compilation output will be stored (including the executable).
     ```
     mkdir build
     ``` 
 
-2. Moves into the directory created in the step above.
+3. Moves into the directory created in the step above.
     ```
     cd build
     ```
 
-3. Create the Makefile based on the script found in `CMakeLists.txt`, one level up.
+4. Create the Makefile based on the script found in `CMakeLists.txt`, one level up.
     ```
     cmake -G "Unix Makefiles" .. .
     ```
 
-4. Start the compiling process
+5. Start the compiling process
     ```
     cmake --build .
     ```
 
-5. Copies the library to the `lib` directory.
+6. Copies the library to the `lib` directory.
     ```
     make install
     ```  
 
-6. Create a symlink (shortcut) from the `run_tests`. Anyway, it's optional.
+7. Create a symlink (shortcut) from the `run_tests`. Anyway, it's optional.
     ```
     cd .. && ln -sf build/run_tests .
     ```
