@@ -6,6 +6,9 @@ An example of using [GTest](https://github.com/google/googletest) with a simple 
 
 Initially, it was just my notes.
 
+## TODO
+- [ ] Write more examples.
+
 ## Compiling
 
 Assuming you have installed [CMake](https://cmake.org), [GTest](https://github.com/google/googletest) and Git, we can follow these steps:
